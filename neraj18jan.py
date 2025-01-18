@@ -18,11 +18,11 @@ COLLECTION_NAME = "users"
 attack_in_progress = False
 ATTACK_TIME_LIMIT = 300  # Maximum attack duration in seconds
 COINS_REQUIRED_PER_ATTACK = 5  # Coins required for an attack
-ATTACK_COOLDOWN = 5  # Cooldown period in seconds (5 minutes)
+ATTACK_COOLDOWN = 10 # Cooldown period in seconds (5 minutes)
 
 # Global variables for packet size and threads
-packet_size = 6
-threads = 811
+packet_size = 9
+threads = 900
 
 # Global variables for managing cooldowns
 last_attack_time = defaultdict(lambda: datetime.min)
@@ -63,7 +63,7 @@ async def start(update: Update, context: CallbackContext):
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
-async def neeraj(update: Update, context: CallbackConte@H3X_neerajxt):
+async def neeraj(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     args = context.args
 
