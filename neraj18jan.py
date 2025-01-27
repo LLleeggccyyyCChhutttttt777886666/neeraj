@@ -21,8 +21,8 @@ COINS_REQUIRED_PER_ATTACK = 5  # Coins required for an attack
 ATTACK_COOLDOWN = 5  # Cooldown period in seconds (5 minutes)
 
 # Global variables for packet size and threads
-packet_size = 6
-threads = 811
+packet_size = 1
+threads = 500
 
 # Global variables for managing cooldowns
 last_attack_time = defaultdict(lambda: datetime.min)
